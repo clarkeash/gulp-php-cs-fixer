@@ -16,7 +16,8 @@ module.exports = function (command, opts) {
     dryRun:         opts.dryRun         || false,
     fixers:         opts.fixers         || '',
     level:          opts.level          || '',
-    configFile:     opts.configFile     || '.php_cs'
+    configFile:     opts.configFile     || '.php_cs',
+    path:           opts.path           || ''
 
   };
 
@@ -31,11 +32,13 @@ module.exports = function (command, opts) {
   if (opts.fixers) { cmd += ' --fixers=' + opts.fixers; }
   if (opts.level) { cmd += ' --level=' + opts.level; }
 
+  if (opts.path) { cmd += ' ' + opts.path; }
 
-  // console.log(cmd);
+
+  console.log(cmd);
 
   // exec(cmd, function (error, stdout, stderr) {
- 
+
   // });
 
 };

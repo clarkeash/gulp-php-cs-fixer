@@ -1,5 +1,6 @@
 var phpcsfixer = require('./index.js');
 
 phpcsfixer('', {
-	silent: true
+	silent: true,
+	path: 'src'
 });
