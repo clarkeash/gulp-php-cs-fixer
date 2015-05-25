@@ -1,0 +1,27 @@
+{
+  "name": "gulp-php-cs-fixer",
+  "version": "0.1.0",
+  "description": "PHP Code Sniffer Fixer for Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clarkeash/gulp-php-cs-fixer"
+  },
+  "keywords": [
+    "gulp",
+    "php",
+    "codesniffer"
+  ],
+  "author": "Ashley Clarke <me@ashleyclarke.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clarkeash/gulp-php-cs-fixer/issues"
+  },
+  "homepage": "https://github.com/clarkeash/gulp-php-cs-fixer",
+  "dependencies": {
+    "gulp-util": "^3.0.4"
+  }
+}
