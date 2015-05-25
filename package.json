@@ -1,7 +1,7 @@
 {
   "name": "gulp-php-cs-fixer",
   "version": "0.1.0",
-  "description": "PHP Code Sniffer Fixer for Gulp",
+  "description": "PHP Coding Standards Fixer for Gulp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,8 @@
   "keywords": [
     "gulp",
     "php",
-    "codesniffer"
+    "code",
+    "standards"
   ],
   "author": "Ashley Clarke <me@ashleyclarke.me>",
   "license": "MIT",
