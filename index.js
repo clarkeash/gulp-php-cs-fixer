@@ -2,11 +2,11 @@
 
 'use strict';
 
-var gutil = require('gulp-util');
 var exec = require('child_process').exec;
 
 module.exports = function (command, opts) {
 
+  command = command || './vendor/bin/php-cs-fixer';
   opts = opts || {};
 
   opts = {
@@ -16,29 +16,23 @@ module.exports = function (command, opts) {
     dryRun:         opts.dryRun         || false,
     fixers:         opts.fixers         || '',
     level:          opts.level          || '',
-    configFile:     opts.configFile     || '.php_cs',
+    configFile:     opts.configFile     || '',
     path:           opts.path           || ''
 
   };
 
-  if (!command) {
-    command = './vendor/bin/php-cs-fixer';
-  }
-
   var cmd = command + ' fix';
 
-  if (opts.silent) { cmd += ' --quiet'; }
-  if (opts.dryRun) { cmd += ' --dry-run'; }
-  if (opts.fixers) { cmd += ' --fixers=' + opts.fixers; }
-  if (opts.level) { cmd += ' --level=' + opts.level; }
+  if (opts.silent)      { cmd += ' --quiet'; }
+  if (opts.dryRun)      { cmd += ' --dry-run'; }
+  if (opts.fixers)      { cmd += ' --fixers=' + opts.fixers; }
+  if (opts.level)       { cmd += ' --level=' + opts.level; }
+  if (opts.configFile)  { cmd += ' --config-file=' + opts.configFile; }
 
   if (opts.path) { cmd += ' ' + opts.path; }
 
-
-  console.log(cmd);
-
-  // exec(cmd, function (error, stdout, stderr) {
-
-  // });
+  exec(cmd, function (error, stdout, stderr) {
+      // Should probably do something with the output
+  });
 
 };
